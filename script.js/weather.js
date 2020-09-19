@@ -19,9 +19,12 @@ function weatherSearch () {
         var lon = response.coord.lon;
         console.log(lat);
         console.log(lon);
-        return lat, lon;
+        // return lat, lon;
+        
+        coord(lat, lon);
 
     });
+
 }
 weatherSearch();
 
