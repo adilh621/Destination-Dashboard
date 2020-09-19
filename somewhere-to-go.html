@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main Landing Page -->
+    <title>Landing Page</title>
+
+    <!-- Bootstrap Stylesheet-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Font Aewsome Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- ALL CSS Stylesheets -->
+
+    <!-- main CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./style.css/master-style.css">
+
+    <!-- somewhere-to-eat CSS stylesheet -->
+    <link rel="stylesheet" href="./style.css/foodStyle.css">
+
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+        <a class="navbar-brand h1" href="./dashboard.html">Desination Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- navigation menu (right)-->
+        <div class="collapse navbar-collapse align-right" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./somewhere-to-go.html">place icon<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./something-to-eat.html">food icon</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- welcome container-->
+    <div class="jumbotron text-center" id="jumbotron">
+
+        <!-- welcome to message -->
+        <div id="welcomeMessage" class="start">
+
+            <form class="form-inline justify-content-center">
+                <label class="h1">Welcome to</label>
+
+                <!-- city input -->
+                <input type="text" class="form-control" id="cityInput" placeholder="enter city">
+                <button type="submit" class="btn btn-primary" id="searchCityBtn">!</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- result container -->
+    <div id="placeResult" class="container">
+
+        <!--place page title -->
+        <div id="pageTitle">
+
+            <h3>Somewhere to go</h3>
+
+        </div>
+
+        <!-- beginning of cards -->
+        <div class="row">
+
+            <!-- card 1 -->
+            <div class="card" style="width: 25%;">
+                <img class="place-img-top" src="..." alt="placeholder">
+                <div class="place-body">
+                    <h5 class="place-title">place 1</h5>
+                    <p class="place-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quae esse nulla
+                        voluptatem culpa alias cupiditate libero ratione debitis magnam.</p>
+                    <a href="#" class="btn btn-primary">add to planner</a>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="card" style="width: 25%;">
+                <img class="place-img-top" src="..." alt="placeholder">
+                <div class="place-body">
+                    <h5 class="place-title">place 2</h5>
+                    <p class="place-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis minus eos
+                        eum corporis tempora laborum voluptatum amet animi.</p>
+                    <a href="#" class="btn btn-primary">add to planner</a>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="card" style="width: 25%;">
+                <img class="place-img-top" src="..." alt="placeholder">
+                <div class="place-body">
+                    <h5 class="place-title">place 3</h5>
+                    <p class="place-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas dolor nobis aut
+                        iste facilis autem neque error, architecto voluptate at, velit sequi distinctio repellendus
+                        beatae!</p>
+                    <a href="#" class="btn btn-primary">add to planner</a>
+                </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="card" style="width: 25%;">
+                <img class="place-img-top" src="..." alt="placeholder">
+                <div class="place-body">
+                    <h5 class="place-title">place 4</h5>
+                    <p class="place-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quibusdam quam
+                        eligendi doloribus saepe laboriosam voluptatum laudantium eaque est inventore, neque vitae
+                        quaerat veniam.</p>
+                    <a href="#" class="btn btn-primary">add to planner</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>Copyright - Jetsetters 2020</footer>
+
+    <!-- scripts -->
+
+    <!-- jQuery links -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JavaScript CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- somewhere to eat script -->
+    <script src="./script.js/food.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+footer{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.jumbotron{
+    background-color: white;
+}
+
+.hide {
+    display: none;
+  }
+
+.dash-card{
+    text-align: center;
+}
+
