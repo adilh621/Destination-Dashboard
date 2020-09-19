@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $("#btn").click(function(){
+    $("#searchCityBtn").click(function(lat , lon){
     
         
     
@@ -12,8 +12,8 @@ $(document).ready(function(){
     //   var long = position.coords.longitude;
     //   var long = JSON.stringify(y)
     
-      console.log(lat1);
-      console.log(long);
+      console.log(lat);
+      console.log(lon);
       $.ajax({
         
         type: "GET",
