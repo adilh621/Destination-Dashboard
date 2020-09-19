@@ -1,7 +1,11 @@
 //JS
 
 var APIkey = "af6923e95cbb6c53be8ceb07c2b776e5";
+
 var city = "New York";
+
+
+
 
 
 function weatherSearch () {
@@ -20,3 +24,5 @@ function weatherSearch () {
     });
 }
 weatherSearch();
+
+

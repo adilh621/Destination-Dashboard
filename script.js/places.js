@@ -1,16 +1,5 @@
 // JS code
 
-
-// var googlePlaces = "https://maps.googleapis.com/maps/api/place/details/output?parameters";
-
-// const APIkey = "AIzaSyBAn5hITIfAmXdLB3OzP1gaOeiGggUNo_Y";
-
-// var city = ["New York", "Paris", "Newark", "Moscow"];
-
-// var queryURL = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=" + APIkey;
-// var queryURL2 = "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=AIzaSyBAn5hITIfAmXdLB3OzP1gaOeiGggUNo_Y"
-var city = "New York"
-
 var openAPI = "af6923e95cbb6c53be8ceb07c2b776e5"
 
 var tomAPI = "OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk"
