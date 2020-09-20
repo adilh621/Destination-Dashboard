@@ -12,10 +12,11 @@ function coord(lat,lon){
         data:{
             lat: lat,
             lon: lon,
-            // entity_type: "zone",
-            // radius: "16000",
+            // entity_type: "group",
+            
             sort : "real_distance",
-            q:"fastfood"
+            q : "bakery"
+            
         },
         success:
             function(response) {
@@ -23,7 +24,7 @@ function coord(lat,lon){
         },
         });
 
-        
+
 
 
 
