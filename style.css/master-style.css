@@ -1,17 +1,85 @@
-footer{
-    text-align: center;
-    padding-top: 20px;
+/* colour swatch codes
+document background offwhite: rgb(252, 251, 250)
+black text: rgb(63, 63, 63)
+accent grey: rgb(197, 197, 197)
+pop orange:  rgb(224, 111, 71)
+alt colour: rgb(135, 59, 32)
+
+*/
+
+.jumbotron {
+    background-color: rgb(252, 251, 250);
 }
 
-.jumbotron{
-    background-color: white;
+.jumbo-text {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#searchCityBtn {
+    border: 1px solid rgb(197, 197, 197);
 }
 
 .hide {
     display: none;
-  }
-
-.dash-card{
-    text-align: center;
 }
 
+.nav-links {
+    border: 2px solid tomato;
+    font-size: 18px;
+}
+
+.dash-card {
+    background-color: rgb(243, 243, 243);
+    text-align: center;
+    border: 1px solid rgb(197, 197, 197);
+    margin: 5px;
+}
+
+.card {
+    background-color: rgb(243, 243, 243);
+}
+
+.card-img {
+    max-height: 1900px;
+}
+.input-box {
+    border: 2px solid tomato;
+}
+
+.page-title {
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.card-title{
+    color: rgb(135, 59, 32);
+    font-weight: 800;
+}
+
+body {
+    background-color: rgb(252, 251, 250);
+    color: rgb(63, 63, 63);
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.navbar-nav>.active>a {
+    color: aqua;
+}
+
+.hover-effect-dark:hover {
+    color: white !important;
+    background-color: rgb(224, 111, 71);
+}
+
+.hover-effect-dark:active {
+    background-color: rgb(170, 81, 49);
+}
