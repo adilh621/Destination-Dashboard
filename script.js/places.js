@@ -1,50 +1,158 @@
-// // JS code
+// JS code
+var city = "las vegas";
+// var city;
 
-// var openAPI = "af6923e95cbb6c53be8ceb07c2b776e5"
+var lat;
+var lon;
 
-// var tomAPI = "OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk"
+var poiId = [];
+var imgId = [];
 
-// // var h1El = document.querySelector("#test");
+var placeName = [];
+var address = [];
+var country = [];
+var rank = [];
 
-// function weatherSearch () {
-//     var queryURL2 = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + openAPI;
+var openAPI = "af6923e95cbb6c53be8ceb07c2b776e5"
+var tomAPI = "OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk"
+
+function weatherSearch () {
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + openAPI;
     
-//     $.ajax({
-//         url: queryURL2,
-//         method: "GET"
-//     }).then(function(response) {
-//         // console.log(response);
-//         // $(".city").empty().append(response.name);
-//         // $(".icon").empty().attr("src", "https://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
-        
-//         var lat = response.coord.lat;
-//         var lon = response.coord.lon;
-//         console.log(lat);
-//         console.log(lon);
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+        lat = response.coord.lat;
+        lon = response.coord.lon;
+        console.log(city, lat, lon);
+        tom1(lat, lon);
+    });
+}
+weatherSearch();
 
-//         // uvAndTime(lat, lon);
-//     });
+
+// Show TomTom Tourist Attractions
+function tom1 (lat, lon) {
+    var queryURL = "https://api.tomtom.com/search/2/search/important tourist attraction.json?key=" + tomAPI + "&lat=" + lat + "&lon=" + lon + "&idxSet=POI&limit=5";
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+        //make an array of POIs which possess "dataSources" = images
+        for (var i = 0; i < 5; i++) {
+        if (response.results[i].dataSources !== undefined) {
+            poiId.push(response.results[i].dataSources.poiDetails[0].id);
+            placeName.push(response.results[i].poi.name);
+            address.push(response.results[i].address.freeformAddress);
+            country.push(response.results[i].address.country);
+            rank.push(response.results[i].score.toFixed(1));
+        }
+        else 
+        {console.log("not lucky today")}
+    }   
+    tom2(poiId);
+    console.log(poiId);
+    console.log(placeName);
+    console.log(address);
+    console.log(country);
+    console.log(rank);
+
+
+    });   
+}
+
+
+// get POI details and images after you know POI's ID
+function tom2 (poiId) {
+
+    for (i = 0; i < poiId.length; i++) {
+    var queryURL = "https://api.tomtom.com/search/2/poiDetails.json?key=" + tomAPI + "&id=" + poiId[i];
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+        imgId.push(response.result.photos[0].id);
+                // var creator = $(".place-img-top").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + response.result.photos[0].id + "&height=200&width=200");
+                // var creator = $("<img>").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + response.result.photos[0].id + "&height=200&width=200");
+                callme(imgId);
+                // $("#results").append(creator);
+    });
+    } 
+    
+}
+
+console.log(imgId);
+
+function callme(imgId) {
+    for (var i = 0; i < imgId.length; i++) {
+var imageEl = $("<img>").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgId[i] + "&height=200&width=200");
+                        
+$("#results").append(imageEl);
+var p = $("<p>").text(placeName[i]);
+var r = $("<p>").text(address[i]);
+var s = $("<p>").text(country[i]);
+var t = $("<p>").text(rank[i]);
+
+$("#results").append(p);
+$("#results").append(r);
+$("#results").append(s);
+$("#results").append(t);
+}
+}
+// $("#el2").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgId + "&height=200&width=200");
+
+// $("#el3").text(placeName[0]);
+// $("#el4").text(address[0]);
+// $("#el5").text(country[0]);
+// $("#el6").text("Our score is: " + rank[0] + "/10");
+// var star = $("<img>").attr("src", "star.png");
+// var recom = $("<img>").attr("src", "https://media.giphy.com/media/LpKKZSe05le5Ki8YAt/giphy.gif").attr("class", "smaller");
+
+// recom.setAttribute("class", "feedback");
+// setTimeout(function() {
+//     recom.setAttribute("class", "flashing");
+// }, 1000);
+
+// feedbackEl.setAttribute("class", "feedback");
+
+
+
+// $("#el6").prepend(star);
+// $("#el6").append(recom);
+
 // }
 
-// weatherSearch();
 
-// function tomSearch () {
-//     var queryURL = "https://api.tomtom.com/search/2/poiDetails.json?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=Rm91cnNxdWFyZTo1NTExYWY3MTQ5OGUwZjc4OWNkODRhZjI="
-//     var pic = "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=23bc3b0b-d33d-3c07-8612-e660ea7c0864&height=200&width=200"
-//     $.ajax({
-//         url: queryURL,
-//         method: "GET"
-//     }).then(function(response) {
-//         console.log(response);
-        
-//         $("#pic1").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + response.result.photos[0].id + "&height=200&width=200");
-//         $("#pic2").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + response.result.photos[1].id + "&height=200&width=200");
-//         $("#pic3").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + response.result.photos[2].id + "&height=200&width=200");
-//         $("#pic4").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + response.result.photos[3].id + "&height=200&width=200");
-//         $("#pic5").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + response.result.photos[4].id + "&height=200&width=200");
+// function appendAll(captions) {
 
-//     });
+//         console.log(captions);
 
 // }
+//         // console.log(address[i]);
+//         // console.log(country[i]);
 
-// tomSearch();
+
+
+
+//     // console.log(captions);
+//     // console.log(imgId);
+//     // console.log(address);
+//     // console.log(country);
+
+
+// appendAll(captions);
+
+// console.log(placeName);
+
+
+
+
+// $('#searchCityBtn').on('click', function(){
+//     event.preventDefault();
+//     city = $('#cityInput').val();
+//     weatherSearch(city);
+// });
