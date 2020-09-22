@@ -94,27 +94,75 @@ function refineSearch(lat , lon ,q){
                 
                 
                 // BOX 1
+
+                //image placement
                 var restaurantImg = response.restaurants[0].restaurant.featured_image
                 console.log(restaurantImg);
                 var imgContainer = $("#imgOne");
-                imgContainer.attr('src', restaurantImg)
+                imgContainer.attr('src', (restaurantImg))
+                //name placement
+                var restaurantName = response.restaurants[0].restaurant.name
+                console.log(restaurantName);
+                $("#food-title1").html(restaurantName);
+                //location placement
+                var restaurantAddress = response.restaurants[0].restaurant.location.address
+                var phoneNumber = response.restaurants[0].restaurant.phone_numbers
+                console.log(restaurantAddress)
+                $("#text1").html(restaurantAddress +" "+ "Phone Number: " +phoneNumber);
+
                 // BOX 2
-                var restaurantImg = response.restaurants[1].restaurant.featured_image
-                console.log(restaurantImg);
+
+                //image placement
+                var restaurantImg2 = response.restaurants[1].restaurant.featured_image
+                console.log(restaurantImg2);
                 var imgContainer2 = $("#imgTwo");
-                imgContainer.attr('src', restaurantImg)
+                imgContainer.attr('src', restaurantImg2)
+                //name placement
+                var restaurantName2 = response.restaurants[1].restaurant.name
+                console.log(restaurantName2);
+                $("#food-title2").html(restaurantName2);
+                //location and phone # placement 
+                var restaurantAddress2 = response.restaurants[1].restaurant.location.address
+                var phoneNumber2 = response.restaurants[1].restaurant.phone_numbers
+                console.log(restaurantAddress2)
+                $("#text2").html(restaurantAddress2 +" "+ "Phone Number: " +phoneNumber2);
+                
+                
 
 
                 // BOX 3
-                var restaurantImg = response.restaurants[2].restaurant.featured_image
-                console.log(restaurantImg);
+
+                //image placement
+                var restaurantImg3 = response.restaurants[2].restaurant.featured_image
+                console.log(restaurantImg3);
                 var imgContainer3 = $("#imgThree");
-                imgContainer.attr('src', restaurantImg)
+                imgContainer.attr('src', restaurantImg3)
+                //name placement
+                var restaurantName3 = response.restaurants[2].restaurant.name
+                console.log(restaurantName3);
+                $("#food-title3").html(restaurantName3);
+                //location placement
+                var restaurantAddress3 = response.restaurants[2].restaurant.location.address
+                var phoneNumber3 = response.restaurants[2].restaurant.phone_numbers
+                console.log(restaurantAddress3)
+                $("#text3").html(restaurantAddress3 +" "+ "Phone Number: " +phoneNumber3);
+
                 // BOX 4
-                var restaurantImg = response.restaurants[3].restaurant.featured_image
-                console.log(restaurantImg);
+
+                //image placement
+                var restaurantImg4 = response.restaurants[3].restaurant.featured_image
+                console.log(restaurantImg4);
                 var imgContainer4 = $("#imgFour");
-                imgContainer.attr('src', restaurantImg)
+                imgContainer4.attr('src', restaurantImg4)
+                //name placement
+                var restaurantName4 = response.restaurants[3].restaurant.name
+                console.log(restaurantName4);
+                $("#food-title4").html(restaurantName4);
+                //location placement
+                var restaurantAddress4 = response.restaurants[3].restaurant.location.address
+                var phoneNumber4 = response.restaurants[3].restaurant.phone_numbers
+                console.log(restaurantAddress4)
+                $("#text4").html(restaurantAddress4 +" "+ "Phone Number: " +phoneNumber4);
                 
         },
         });
