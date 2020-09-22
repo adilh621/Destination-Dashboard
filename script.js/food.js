@@ -1,8 +1,15 @@
 function refineSearch(lat , lon ,q){
 
     var q = ' ';
-    var option1 = document.getElementById("option1")
-    var option2 = document.getElementById("option2")
+    var option1 = document.getElementById("bakery")
+    var option2 = document.getElementById("asian")
+    var option3 = document.getElementById("mediterranean")
+    var option4 = document.getElementById("seafood")
+    var option5 = document.getElementById("vegetarian")
+    var option6 = document.getElementById("fastfood")
+    var option7 = document.getElementById("deli")
+    var option8 = document.getElementById("bar")
+
     if(option1.checked===true){
         
         var search1 = option1.value 
@@ -38,7 +45,30 @@ function refineSearch(lat , lon ,q){
         q = search5;
     
     }
+    else if(option6.checked === true){
+        
+        var search6 = option6.value
+        console.log(search6);
+        q = search6;
+    
+    }
+    else if(option7.checked === true){
+        
+        var search7 = option7.value
+        console.log(search7);
+        q = search7;
+    
+    }
+    else if(option8.checked === true){
+        
+        var search8 = option8.value
+        console.log(search8);
+        q = search8;
+    
+    }
     else{alert('nothing was selected')}
+   
+   
     console.log("user lat is:",lat);
     console.log("user lon is:",lon);
     console.log("user criteria is:" , q);
