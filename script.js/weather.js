@@ -1,7 +1,7 @@
 //JS
 
 var searchBtn = $('#searchCityBtn')
-
+var departBtn = $("#departBtn");
 function weatherSearch (city) {
     var APIkey = "af6923e95cbb6c53be8ceb07c2b776e5";
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIkey;
@@ -35,6 +35,13 @@ $(searchBtn).on('click', function(){
     
  
 });
+
+$(departBtn).on('click' , function(){
+    //show contents and prompts user to select option
+
+    //change the innerHTML for "cityinput"
+    
+})
 
 
 
