@@ -1,5 +1,6 @@
 // JS code
-var city = "las vegas";
+var city = "chicago";
+// var city = 
 // var city;
 
 var lat;
@@ -34,7 +35,7 @@ weatherSearch();
 
 // Show TomTom Tourist Attractions
 function tom1 (lat, lon) {
-    var queryURL = "https://api.tomtom.com/search/2/search/important tourist attraction.json?key=" + tomAPI + "&lat=" + lat + "&lon=" + lon + "&idxSet=POI&limit=5";
+    var queryURL = "https://api.tomtom.com/search/2/search/important tourist attraction.json?key=" + tomAPI + "&lat=" + lat + "&lon=" + lon + "&idxSet=POI&limit=20";
 
     $.ajax({
         url: queryURL,
@@ -42,7 +43,7 @@ function tom1 (lat, lon) {
     }).then(function(response) {
         console.log(response);
         //make an array of POIs which possess "dataSources" = images
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 20; i++) {
         if (response.results[i].dataSources !== undefined) {
             poiId.push(response.results[i].dataSources.poiDetails[0].id);
             placeName.push(response.results[i].poi.name);
@@ -88,19 +89,28 @@ function tom2 (poiId) {
 console.log(imgId);
 
 function callme(imgId) {
-    for (var i = 0; i < imgId.length; i++) {
-var imageEl = $("<img>").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgId[i] + "&height=200&width=200");
+    for (var i = 0; i < 5; i++) {
+// var imageEl = $("<img>").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgId[i]);
                         
-$("#results").append(imageEl);
-var p = $("<p>").text(placeName[i]);
-var r = $("<p>").text(address[i]);
-var s = $("<p>").text(country[i]);
-var t = $("<p>").text(rank[i]);
+$("#imx" + i).attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgId[i]);
+// $("#imx2").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgId[1]);
+// $("#imx3").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgId[2]);
+// $("#imx4").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgId[3]);
 
-$("#results").append(p);
-$("#results").append(r);
-$("#results").append(s);
-$("#results").append(t);
+$("#hel" + i).text(placeName[i]);
+$("#par" + i).text(address[i]);
+var ctry = $("<p>").text(country[i]);
+var rnk = $("<p>").text("Our verdict: " + rank[i] + " out of 10 stars!");
+$("#par" + i).text(address[i]).append(ctry).append(rnk);
+// var p = $("<p>").text(placeName[i]);
+// var r = $("<p>").text(address[i]);
+// var s = $("<p>").text(country[i]);
+// var t = $("<p>").text(rank[i]);
+
+// $("#results").append(p);
+// $("#results").append(r);
+// $("#results").append(s);
+// $("#results").append(t);
 }
 }
 // $("#el2").attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgId + "&height=200&width=200");

@@ -17,6 +17,7 @@ function weatherSearch (city) {
         // console.log(lon);
         // return lat, lon;
         refineSearch(lat , lon);
+        // tom1(lat, lon);
     });
     
     console.log("weather recieved")
@@ -33,13 +34,19 @@ $(searchBtn).on('click', function(){
     console.log(city);
     weatherSearch(city);
     
- 
+
 });
 
-$(departBtn).on('click' , function(){
-    //show contents and prompts user to select option
-
-    //change the innerHTML for "cityinput"
+$(departBtn).on('click' , function(e){
+    var $inputCityVal = $("#cityInput")
+    e.preventDefault();
+    console.log("here")
+    // //show contents and prompts user to select option
+    $('#dashboard').show();
+    $('#navMessage').show();
+    // //change the innerHTML for "cityinput"
+    
+    // placeholderCity.attr("placeholder", $inputCityVal);
     
 })
 
