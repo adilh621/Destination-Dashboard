@@ -108,7 +108,19 @@ function refineSearch(lat , lon ,q){
                 var restaurantAddress = response.restaurants[0].restaurant.location.address
                 var phoneNumber = response.restaurants[0].restaurant.phone_numbers
                 console.log(restaurantAddress)
-                $("#text1").html(restaurantAddress +" "+ "Phone Number: " +phoneNumber);
+                $("#text1").html(restaurantAddress +" "+" " +"Phone Number: " +phoneNumber);
+                //time placement
+                var restaurantTime = response.restaurants[0].restaurant.timings
+                console.log(restaurantTime);
+                $("#times1").html("Hours of Operation: "+" "+restaurantTime)
+                //price placememnt
+                var restaurantPrice = response.restaurants[0].restaurant.price_range
+                console.log(restaurantPrice)
+                $("#price1").html("Price(1=$   4=$$$$):"+" "+restaurantPrice);
+                //menu placement
+                var restaurantMenu = response.restaurants[0].restaurant.menu_url
+                console.log(restaurantMenu);
+                $("#menu1").attr("href" , restaurantMenu)
 
                 // BOX 2
 
@@ -125,7 +137,19 @@ function refineSearch(lat , lon ,q){
                 var restaurantAddress2 = response.restaurants[1].restaurant.location.address
                 var phoneNumber2 = response.restaurants[1].restaurant.phone_numbers
                 console.log(restaurantAddress2)
-                $("#text2").html(restaurantAddress2 +" "+ "Phone Number: " +phoneNumber2);
+                $("#text2").html(restaurantAddress2 +" "+" " + "Phone Number: " +phoneNumber2);
+                //time placement
+                var restaurantTime2 = response.restaurants[1].restaurant.timings
+                console.log(restaurantTime2);
+                $("#times2").html("Hours of Operation: "+" "+restaurantTime2)
+                //price placememnt
+                var restaurantPrice2 = response.restaurants[1].restaurant.price_range
+                console.log(restaurantPrice2)
+                $("#price2").html("Price(1=$   4=$$$$):"+" "+restaurantPrice2);
+                //menu placement
+                var restaurantMenu2 = response.restaurants[1].restaurant.menu_url
+                console.log(restaurantMenu2);
+                $("#menu2").attr("href" , restaurantMenu2)                
                 
                 
 
@@ -145,7 +169,19 @@ function refineSearch(lat , lon ,q){
                 var restaurantAddress3 = response.restaurants[2].restaurant.location.address
                 var phoneNumber3 = response.restaurants[2].restaurant.phone_numbers
                 console.log(restaurantAddress3)
-                $("#text3").html(restaurantAddress3 +" "+ "Phone Number: " +phoneNumber3);
+                $("#text3").html(restaurantAddress3 +" "+" " + "Phone Number: " +phoneNumber3);
+                //time placement
+                var restaurantTime3 = response.restaurants[2].restaurant.timings
+                console.log(restaurantTime3);
+                $("#times3").html("Hours of Operation: "+" "+restaurantTime3)
+                //price placememnt
+                var restaurantPrice3 = response.restaurants[2].restaurant.price_range
+                console.log(restaurantPrice3)
+                $("#price3").html("Price(1=$   4=$$$$):"+" "+restaurantPrice3);
+                //menu placement
+                var restaurantMenu3 = response.restaurants[2].restaurant.menu_url
+                console.log(restaurantMenu3);
+                $("#menu3").attr("href" , restaurantMenu3)
 
                 // BOX 4
 
@@ -162,7 +198,19 @@ function refineSearch(lat , lon ,q){
                 var restaurantAddress4 = response.restaurants[3].restaurant.location.address
                 var phoneNumber4 = response.restaurants[3].restaurant.phone_numbers
                 console.log(restaurantAddress4)
-                $("#text4").html(restaurantAddress4 +" "+ "Phone Number: " +phoneNumber4);
+                $("#text4").html(restaurantAddress4 + " " + " " +"Phone Number: " +phoneNumber4);
+                //time placement
+                var restaurantTime4 = response.restaurants[3].restaurant.timings
+                console.log(restaurantTime4);
+                $("#times4").html("Hours of Operation: "+" "+restaurantTime4)
+                //price placememnt
+                var restaurantPrice4 = response.restaurants[3].restaurant.price_range
+                console.log(restaurantPrice4)
+                $("#price4").html("Price(1=$   4=$$$$):"+" "+restaurantPrice4);
+                //menu placement
+                var restaurantMenu4 = response.restaurants[3].restaurant.menu_url
+                console.log(restaurantMenu4);
+                $("#menu4").attr("href" , restaurantMenu4)
                 
         },
         });
