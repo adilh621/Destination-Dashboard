@@ -1,6 +1,6 @@
 //JS
 
-var searchBtn = $('#searchCityBtn')
+var searchBtn = $('#searchCityBtn food')
 var departBtn = $("#departBtn");
 function weatherSearch (city) {
     var APIkey = "af6923e95cbb6c53be8ceb07c2b776e5";

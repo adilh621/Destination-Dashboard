@@ -90,6 +90,32 @@ function refineSearch(lat , lon ,q){
         success:
             function(response) {
                 console.log(response);
+                // create variable that stores
+                
+                
+                // BOX 1
+                var restaurantImg = response.restaurants[0].restaurant.featured_image
+                console.log(restaurantImg);
+                var imgContainer = $("#imgOne");
+                imgContainer.attr('src', restaurantImg)
+                // BOX 2
+                var restaurantImg = response.restaurants[1].restaurant.featured_image
+                console.log(restaurantImg);
+                var imgContainer2 = $("#imgTwo");
+                imgContainer.attr('src', restaurantImg)
+
+
+                // BOX 3
+                var restaurantImg = response.restaurants[2].restaurant.featured_image
+                console.log(restaurantImg);
+                var imgContainer3 = $("#imgThree");
+                imgContainer.attr('src', restaurantImg)
+                // BOX 4
+                var restaurantImg = response.restaurants[3].restaurant.featured_image
+                console.log(restaurantImg);
+                var imgContainer4 = $("#imgFour");
+                imgContainer.attr('src', restaurantImg)
+                
         },
         });
 }
