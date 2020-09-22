@@ -85,3 +85,7 @@ footer {
     width: 100px;
     height: 100px;
 }
+
+.dashboard{
+    justify-content: center;
+}
