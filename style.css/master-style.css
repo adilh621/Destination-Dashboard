@@ -4,7 +4,6 @@ black text: rgb(63, 63, 63)
 accent grey: rgb(197, 197, 197)
 pop orange:  rgb(224, 111, 71)
 alt colour: rgb(135, 59, 32)
-
 */
 
 .jumbotron {
@@ -47,11 +46,11 @@ alt colour: rgb(135, 59, 32)
     border: 2px solid tomato;
 }
 
-.page-title {
-    margin-left: 50px;
+/* .page-title {
+    margin-left: 200px;
     font-weight: bold;
     font-size: x-large;
-}
+} */
 
 .card-title{
     color: rgb(135, 59, 32);
@@ -62,9 +61,7 @@ body {
     background-color: rgb(252, 251, 250);
     color: rgb(63, 63, 63);
     font-family: 'Montserrat', sans-serif;
-    
 }
-
 
 footer {
     text-align: center;

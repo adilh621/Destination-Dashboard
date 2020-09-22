@@ -19,11 +19,10 @@ function weatherSearch (city) {
         refineSearch(lat , lon);
         // tom1(lat, lon);
     });
-    
-    console.log("weather recieved")
-    
-    
 
+
+
+    console.log("weather recieved");
 }
 
 
@@ -37,15 +36,18 @@ $(searchBtn).on('click', function(){
 
 });
 
+
+// show navMessage and dashboard on click departure button
 $(departBtn).on('click' , function(e){
     var $inputCityVal = $("#cityInput")
     e.preventDefault();
     console.log("here")
-    // //show contents and prompts user to select option
+    
+     //show contents and prompts user to select option
     $('#dashboard').show();
     $('#navMessage').show();
-    // //change the innerHTML for "cityinput"
     
+    //change the innerHTML for "cityinput"
     // placeholderCity.attr("placeholder", $inputCityVal);
     
 })
