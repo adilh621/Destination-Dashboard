@@ -200,6 +200,9 @@ var anotherId = [];
 
 const imgObj = {}
 const imgObj2 = {}
+const imgObjReviews = {}
+const imgObjReviewsDate = {}
+const imgObjRatings = {}
 
 var placeName = [];
 var address = [];
@@ -208,6 +211,8 @@ var rank = [];
 
 var openAPI = "af6923e95cbb6c53be8ceb07c2b776e5"
 var tomAPI = "OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk"
+
+var touristAtt = "important%20tourist%20attraction"
 
 function weatherSearch2 (city2) {
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city2 + "&units=imperial&appid=" + openAPI;
@@ -242,7 +247,7 @@ function tom1 (lat, lon) {
             placeName.push(response.results[i].poi.name);
             address.push(response.results[i].address.freeformAddress);
             country.push(response.results[i].address.country);
-            rank.push(response.results[i].score.toFixed(1));
+            rank.push(response.results[i].score.toFixed(0));
 
         }
 
@@ -267,11 +272,14 @@ function tom2 (poiId) {
         // console.log(descriptions);
         imgObj[response.id] = response.result.photos[0].id
         imgObj2[response.id] = response.result.description
+        imgObjReviews[response.id] = response.result.reviews[0].text
+        imgObjReviewsDate[response.id] = response.result.reviews[0].date
+        imgObjRatings[response.id] = response.result.rating.value
         
         imgId.push(response.result.photos[0].id);
         anotherId.push(response.result.description);
 
-        callme(imgObj, imgObj2);
+        callme(imgObj, imgObj2, imgObjRatings);
         console.log(anotherId);
 
     });
@@ -280,9 +288,9 @@ function tom2 (poiId) {
 }
 console.log(anotherId);
 // console.log(descriptions);
-function callme(imgObj, imgObj2) {
+function callme(imgObj, imgObj2, imgObjRatings) {
     // console.log(imgObj);
-    console.log(imgObj2);
+    // console.log(imgObj2);
     // console.log(descriptions);
 
     for (var i = 0; i < 5; i++) {
@@ -292,16 +300,35 @@ function callme(imgObj, imgObj2) {
         $("#hel" + i).empty().text(placeName[i]);
         $("#par" + i).empty().text(address[i]);
         var ctry = $("<p>").text(country[i]);
+
         var rnk = $("<p>").text("Our verdict: " + rank[i] + " out of 10 stars!");
         $("#par" + i).empty().text(address[i]).append(ctry).append(rnk)
     }
 
     for (var i = 0; i < 5; i++) {
         
-
         var deb = $("<p>").text(imgObj2[poiId[i]]);
-        $("#par" + i).append(deb);
+        var realRating = $("<p>").text("Average rating: " + imgObjRatings[poiId[i]])
+
+        $("#par" + i).append(deb).append(realRating);
     }
+
+    // for (var i = 0; i < 5; i++) {
+    //     if (imgObjReviews[poiId[i]] !== undefined && imgObjReviewsDate[poiId[i]] !== undefined) {
+    //     var realReview = $("<p>").text("Top review: " + imgObjReviews[poiId[i]] + " (from " + imgObjReviewsDate[poiId[i]] + ")")
+    //     $("#par" + i).append(realReview);
+    //     }
+    // }
+
+    // for (var i = 0; i < 5; i++) {
+    //     if (imgObjRatings[poiId[i]] !== undefined) {
+    //     var realRating = $("<p>").text("Average rating: " + imgObjRatings[poiId[i]])
+    //     $("#par" + i).append(realRating)
+    //     }
+    // }
+
+
+
 }
 
 
