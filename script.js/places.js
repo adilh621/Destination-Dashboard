@@ -209,7 +209,7 @@ var rank = [];
 var openAPI = "af6923e95cbb6c53be8ceb07c2b776e5"
 var tomAPI = "OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk"
 
-function weatherSearch (city2) {
+function weatherSearch2 (city2) {
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city2 + "&units=imperial&appid=" + openAPI;
     
     $.ajax({
@@ -308,7 +308,7 @@ function callme(imgObj, imgObj2) {
 $(searchPan).on('click', function(event){
     event.preventDefault();
     var city2 = $('#cityInput2').val();
-    weatherSearch(city2);
+    weatherSearch2(city2);
     // location.reload();
 
 });
