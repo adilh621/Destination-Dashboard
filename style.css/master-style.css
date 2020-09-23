@@ -89,3 +89,7 @@ footer {
 .dashboard{
     justify-content: center;
 }
+
+.centerme{
+    align-self: center;
+}
