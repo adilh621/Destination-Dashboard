@@ -1,9 +1,45 @@
-# Hungry
+# Destination Dashboard
 
-## In this project, we will be implementing intuitive ways to find foods based on location. The user is allowed to find foods by dietary restrictions and current "cravings"
+Created a travel lifestyle application that allows the user to input destination upon arrival and be presented with all the basic information/travel tips, popular attractions and restaurants in the area so that they can enjoy my stay as soon as they land. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-## Our app will be designed as a system that will allow user's to input what kind of food(s) they are searching for, it will then give the user the option to find a restaurant which serves the food they are looking for, or prompt the user which ingredients will be needed to cook the recipe on their own.
 
-## The app will also be designed to work on the go throughout multiple locations. If the user was travelling through a certain city, the app will guide the user to the nearest restaurants which have the cuisine that best suits their taste at that time.
 
-## The location services are currently in beta testing process and will be released at a later time.
+## User Story
+
+```
+AS A constant traveler with a busy schedule
+I WANT to add search palces to eat and visit 
+SO THAT I can manage my time effectively and be
+ready prior arrival
+```
+
+
+## Acceptance Criteria
+
+```
+GIVEN I am travelling to a new city
+WHEN I input my travel preferences into the search field
+THEN I am presented with options that are catered to the things I am searching for
+GIVEN I am looking for new information on a city I am visiting
+WHEN I use my location
+THEN I am presented with options that are in the nearby vicinity
+GIVEN I find an interesting location I intend on visiting
+WHEN I begin building my itinerary for my stay
+THEN I am presented with a prebuilt itinerary
+```
+
+
+The following animation demonstrates the application functionality:
+
+![day planner demo](./assets/destinationDemo.gif)
+
+## Deployed Application
+
+
+
+* The URL of the deployed application : [click here](https://adilh621.github.io/Destination-Dashboard/dashboard.html)
+
+* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+
+- - -
+© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
