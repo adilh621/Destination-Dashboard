@@ -11,6 +11,7 @@ AS A constant traveler with a busy schedule
 I WANT to add search palces to eat and visit 
 SO THAT I can manage my time effectively and be
 ready prior arrival
+
 ```
 
 
@@ -26,20 +27,18 @@ THEN I am presented with options that are in the nearby vicinity
 GIVEN I find an interesting location I intend on visiting
 WHEN I begin building my itinerary for my stay
 THEN I am presented with a prebuilt itinerary
+
 ```
 
 
 The following animation demonstrates the application functionality:
 
-![day planner demo](./assets/destinationDemo.gif)
+![destination dashboard demo](./assets/destinationDemo.gif)
 
 ## Deployed Application
 
-
-
 * The URL of the deployed application : [click here](https://adilh621.github.io/Destination-Dashboard/dashboard.html)
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
