@@ -128,7 +128,7 @@ function refineSearch(lat , lon ,q){
                 var restaurantImg2 = response.restaurants[1].restaurant.featured_image
                 console.log(restaurantImg2);
                 var imgContainer2 = $("#imgTwo");
-                imgContainer.attr('src', restaurantImg2)
+                imgContainer2.attr('src', restaurantImg2)
                 //name placement
                 var restaurantName2 = response.restaurants[1].restaurant.name
                 console.log(restaurantName2);
@@ -160,7 +160,7 @@ function refineSearch(lat , lon ,q){
                 var restaurantImg3 = response.restaurants[2].restaurant.featured_image
                 console.log(restaurantImg3);
                 var imgContainer3 = $("#imgThree");
-                imgContainer.attr('src', restaurantImg3)
+                imgContainer3.attr('src', restaurantImg3)
                 //name placement
                 var restaurantName3 = response.restaurants[2].restaurant.name
                 console.log(restaurantName3);
