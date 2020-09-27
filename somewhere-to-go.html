@@ -76,7 +76,7 @@
 
 
             <!-- checkbox filters -->
-            <form class="container">
+            <form id="placeFilters" class="container">
                 <div class="form-check">
                     <!--food page title -->
                     <div id="pageTitle">
@@ -107,12 +107,13 @@
             <br>
 
             <!-- result container -->
-            <div id="placeResult" class="container">
+            <div id="placeResult" class="container hide">
                 <!-- beginning of cards -->
                 <!-- <div class="row"> -->
                 <div class="col">
+
                     <!-- card 1 -->
-                    <div class="card mb-3">
+                    <div class="card mb-3 hide" id="card0">
                         <!-- row in card -->
                         <div class="row no-gutters">
                             <!-- place 1 img -->
@@ -139,7 +140,7 @@
                     </div>
 
                     <!-- card 2 -->
-                    <div class="card mb-3">
+                    <div class="card mb-3 hide" id="card1">
                         <!-- row in card -->
                         <div class="row no-gutters">
                             <!-- food 2 img -->
@@ -166,7 +167,7 @@
                     </div>
 
                     <!-- card 3 -->
-                    <div class="card mb-3">
+                    <div class="card mb-3 hide" id="card2">
                         <!-- row in card -->
                         <div class="row no-gutters">
                             <!-- place 3 img -->
@@ -193,7 +194,7 @@
                     </div>
 
                     <!-- card 4 -->
-                    <div class="card mb-3">
+                    <div class="card mb-3" id="card3">
                         <!-- row in card -->
                         <div class="row no-gutters">
                             <!-- food 4 img -->
@@ -222,7 +223,7 @@
                 </div>
         </div>
             <!-- footer -->
-            <footer>Copyright Jetsetters © 2020</footer>
+            <footer class="sticky-footer">Copyright Jetsetters © 2020</footer>
     </div>
         <!-- scripts -->
 

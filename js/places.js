@@ -64,7 +64,7 @@ function tom1 (lat, lon) {
         } 
         
         if (check.length < 1) {
-            alert("Sorry, we didn't find anything interesting! Please try another city.")
+            alert("Sorry, we didn't find anything particularly interesting! Please try another city or filter.")
         }
         else if (check.length < 4 && check.length > 0) {
             alert("We're still improving our database. Come back soon to see more!")
@@ -107,25 +107,15 @@ function appendAll(imgObj, imgObj2) {
         $("#imx" + i).attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgObj[poiId[i]]);
         $("#hel" + i).text(placeName[i]);
         $("#par" + i).text(address[i]).append(ctry).append(deb);
-        $("#ran" + i).text("Our verdict: " + rank[i] + " out of 10 stars!");   
+        $("#ran" + i).text("Our verdict: " + rank[i] + " out of 10 stars!");
+        
+        $("#card" + i).show();
+
     }
 }
 
 $(searchPlaceBtn).on('click', function(event){
-
-    // touristAtt = ""
-    // if (option1place.checked===true) {
-    //     console.log("museum")
-    //     touristAtt = option1place.value
-    // }
-
-    // else if (option4place.checked===true) {
-    //     console.log("monum")
-    //     touristAtt = option4place.value
-    // }
-    // else {
-    //     touristAtt = "important%20tourist%20attraction"
-    // }
+    clearAll();
     preference();
 
     if ($("#cityInput2").val().length == 0) {
@@ -145,6 +135,7 @@ $(searchPlaceBtn).on('click', function(event){
 
     var city2 = $("#cityInput2").val();
     weatherSearch2(city2);
+    $("#placeResult").show();
     }
 });
 
@@ -159,4 +150,12 @@ function preference() {
     else {
         touristAtt = "important%20tourist%20attraction"
     }
+}
+
+function clearAll() {
+$("#card0").hide();
+$("#card1").hide();
+$("#card2").hide();
+$("#card3").hide();
+
 }
