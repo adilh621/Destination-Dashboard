@@ -29,14 +29,14 @@ alt colour: rgb(135, 59, 32)
 }
 
 .dash-card {
-    background-color: rgb(243, 243, 243);
+    background-color: white;
     text-align: center;
     border: 1px solid rgb(197, 197, 197);
     margin: 5px;
 }
 
 .card {
-    background-color: rgb(243, 243, 243);
+    background-color: white;
 }
 
 .card-img {
