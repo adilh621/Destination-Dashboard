@@ -1,7 +1,5 @@
 // JS code
-var city = "Chicago";
-
-var searchPan = $("#searchCityBtnPlace");
+var searchPlaceBtn = $("#searchCityBtnPlace");
 
 var lat;
 var lon;
@@ -111,8 +109,7 @@ function appendAll(imgObj, imgObj2) {
     }
 }
 
-
-$(searchPan).on('click', function(){
+$(searchPlaceBtn).on('click', function(){
     event.preventDefault();
     descriptions = [];
     poiId = [];
