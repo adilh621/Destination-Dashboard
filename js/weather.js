@@ -18,20 +18,16 @@ function weatherSearch(city) {
     });
 }
 
-
 $(searchBtn).on('click', function () {
     event.preventDefault();
     var city = $('#cityInput').val();
     weatherSearch(city);
 });
 
-// Victoria's code starts here
-
 // show navMessage and dashboard on click departure button
 $(departBtn).on('click', function (e) {
     var $inputCityVal = $("#cityInput")
     e.preventDefault();
-    console.log("here")
 
     //show contents and prompts user to select option
     $('#dashboard').show();
@@ -43,12 +39,10 @@ $(departBtn).on('click', function (e) {
 
     // get value
     var targetCity = inputCityText.val();
-    console.log(targetCity);
 
     // set attribute to the value
     placeholderCityText.attr("placeholder",targetCity);
 });
-
 
 //  code for appending info and icon on the dashboard and for displaying drawings
 $(departBtn).on('click', function (e) {
