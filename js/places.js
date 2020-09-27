@@ -62,7 +62,7 @@ function tom1 (lat, lon) {
         } 
         
         if (check.length < 1) {
-            alert("Sorry, we didn't find anything interesting! Please try another city")
+            alert("Sorry, we didn't find anything interesting! Please try another city.")
         }
         else if (check.length < 4 && check.length > 0) {
             alert("We're still improving our database. Come back soon to see more!")
