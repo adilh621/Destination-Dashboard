@@ -27,8 +27,13 @@ $(searchBtn).on('click', function () {
 // show navMessage and dashboard on click departure button
 $(departBtn).on('click', function (e) {
     var $inputCityVal = $("#cityInput")
-    e.preventDefault();
 
+    if ($('#cityInput').val().length == 0) {
+        alert("Please enter city name")
+    }
+
+    else {
+    e.preventDefault();
     //show contents and prompts user to select option
     $('#dashboard').show();
     $('#navMessage').show();
@@ -42,6 +47,7 @@ $(departBtn).on('click', function (e) {
 
     // set attribute to the value
     placeholderCityText.attr("placeholder",targetCity);
+    }
 });
 
 //  code for appending info and icon on the dashboard and for displaying drawings
@@ -95,25 +101,25 @@ function showImages(response) {
     var group8 ="./assets/png_files/img_dash_group8.png"
     var groupElse = "./assets/png_files/img_dash_group_else.png"
     
-    var ide = response.weather[0].id;
+    var idEl = response.weather[0].id;
     
     // dashboard container
     var toBringContainer = $("#to-bring-container")
     
     // if for ID 200-300-500s
-    if (parseInt(ide) < 600) {
+    if (parseInt(idEl) < 600) {
         toBringContainer.attr("src", group235);
     }
     // if for ID 600s
-    else if (parseInt(ide) > 599 && parseInt(ide) < 624) {
+    else if (parseInt(idEl) > 599 && parseInt(idEl) < 624) {
         toBringContainer.attr("src", group6);
     }
     // if for ID 700s
-    else if (parseInt(ide) > 700 && parseInt(ide) < 800) {
+    else if (parseInt(idEl) > 700 && parseInt(idEl) < 800) {
         toBringContainer.attr("src", group7);
     }
     // if for ID 800s
-    else if (parseInt(ide) === 800) {
+    else if (parseInt(idEl) === 800) {
         toBringContainer.attr("src", group8);
     }
     // if for ID anything else just in case

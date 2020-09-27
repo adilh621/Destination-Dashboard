@@ -109,7 +109,13 @@ function appendAll(imgObj, imgObj2) {
     }
 }
 
-$(searchPlaceBtn).on('click', function(){
+$(searchPlaceBtn).on('click', function(event){
+    
+    if ($("#cityInput2").val().length == 0) {
+        alert("Please enter city name")
+    }
+
+    else {
     event.preventDefault();
     descriptions = [];
     poiId = [];
@@ -120,6 +126,7 @@ $(searchPlaceBtn).on('click', function(){
     country = [];
     rank = [];
 
-    var city2 = $('#cityInput2').val();
+    var city2 = $("#cityInput2").val();
     weatherSearch2(city2);
+    }
 });
