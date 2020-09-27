@@ -99,7 +99,9 @@ function refineSearch(lat , lon ,q){
                 var restaurantImg = response.restaurants[0].restaurant.featured_image
                 console.log(restaurantImg);
                 var imgContainer = $("#imgOne");
-                imgContainer.attr('src', (restaurantImg))
+                if (restaurantImg.charAt(0) === "h") {
+                    imgContainer.attr('src', (restaurantImg))}
+                else {imgContainer.attr('src', "./assets/placeholder_img.jpg" )}
                 //name placement
                 var restaurantName = response.restaurants[0].restaurant.name
                 console.log(restaurantName);
@@ -116,7 +118,7 @@ function refineSearch(lat , lon ,q){
                 //price placememnt
                 var restaurantPrice = response.restaurants[0].restaurant.price_range
                 console.log(restaurantPrice)
-                $("#price1").html("Price(1=$   4=$$$$):"+" "+restaurantPrice);
+                $("#price1").html("Price (1=$   4=$$$$):"+" "+restaurantPrice);
                 //menu placement
                 var restaurantMenu = response.restaurants[0].restaurant.menu_url
                 console.log(restaurantMenu);
@@ -128,7 +130,9 @@ function refineSearch(lat , lon ,q){
                 var restaurantImg2 = response.restaurants[1].restaurant.featured_image
                 console.log(restaurantImg2);
                 var imgContainer2 = $("#imgTwo");
-                imgContainer2.attr('src', restaurantImg2)
+                if (restaurantImg2.charAt(0) === "h") {
+                    imgContainer2.attr('src', (restaurantImg2))}
+                else {imgContainer2.attr('src', "./assets/placeholder_img.jpg" )}
                 //name placement
                 var restaurantName2 = response.restaurants[1].restaurant.name
                 console.log(restaurantName2);
@@ -145,7 +149,7 @@ function refineSearch(lat , lon ,q){
                 //price placememnt
                 var restaurantPrice2 = response.restaurants[1].restaurant.price_range
                 console.log(restaurantPrice2)
-                $("#price2").html("Price(1=$   4=$$$$):"+" "+restaurantPrice2);
+                $("#price2").html("Price (1=$   4=$$$$):"+" "+restaurantPrice2);
                 //menu placement
                 var restaurantMenu2 = response.restaurants[1].restaurant.menu_url
                 console.log(restaurantMenu2);
@@ -160,7 +164,9 @@ function refineSearch(lat , lon ,q){
                 var restaurantImg3 = response.restaurants[2].restaurant.featured_image
                 console.log(restaurantImg3);
                 var imgContainer3 = $("#imgThree");
-                imgContainer3.attr('src', restaurantImg3)
+                if (restaurantImg3.charAt(0) === "h") {
+                    imgContainer3.attr('src', (restaurantImg3))}
+                    else {imgContainer3.attr('src', "./assets/placeholder_img.jpg" )}
                 //name placement
                 var restaurantName3 = response.restaurants[2].restaurant.name
                 console.log(restaurantName3);
@@ -177,7 +183,7 @@ function refineSearch(lat , lon ,q){
                 //price placememnt
                 var restaurantPrice3 = response.restaurants[2].restaurant.price_range
                 console.log(restaurantPrice3)
-                $("#price3").html("Price(1=$   4=$$$$):"+" "+restaurantPrice3);
+                $("#price3").html("Price (1=$   4=$$$$):"+" "+restaurantPrice3);
                 //menu placement
                 var restaurantMenu3 = response.restaurants[2].restaurant.menu_url
                 console.log(restaurantMenu3);
@@ -189,7 +195,9 @@ function refineSearch(lat , lon ,q){
                 var restaurantImg4 = response.restaurants[3].restaurant.featured_image
                 console.log(restaurantImg4);
                 var imgContainer4 = $("#imgFour");
-                imgContainer4.attr('src', restaurantImg4)
+                if (restaurantImg4.charAt(0) === "h") {
+                    imgContainer4.attr('src', (restaurantImg4))}
+                else {imgContainer4.attr('src', "./assets/placeholder_img.jpg" )}
                 //name placement
                 var restaurantName4 = response.restaurants[3].restaurant.name
                 console.log(restaurantName4);
@@ -206,7 +214,7 @@ function refineSearch(lat , lon ,q){
                 //price placememnt
                 var restaurantPrice4 = response.restaurants[3].restaurant.price_range
                 console.log(restaurantPrice4)
-                $("#price4").html("Price(1=$   4=$$$$):"+" "+restaurantPrice4);
+                $("#price4").html("Price (1=$   4=$$$$):"+" "+restaurantPrice4);
                 //menu placement
                 var restaurantMenu4 = response.restaurants[3].restaurant.menu_url
                 console.log(restaurantMenu4);
