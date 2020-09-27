@@ -101,15 +101,15 @@ function tom2 (poiId) {
 function appendAll(imgObj, imgObj2) {
 
     for (var i = 0; i < imgId.length; i++) {
-        var deb = $("<p>").text(imgObj2[poiId[i]]);
+        var descriptionP = $("<p>").text(imgObj2[poiId[i]]);
         var ctry = $("<p>").text(country[i]);
 
-        $("#imx" + i).attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgObj[poiId[i]]);
-        $("#hel" + i).text(placeName[i]);
-        $("#par" + i).text(address[i]).append(ctry).append(deb);
-        $("#ran" + i).text("Our verdict: " + rank[i] + " out of 10 stars!");
+        $("#imageP" + (i+1)).attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgObj[poiId[i]]);
+        $("#titleP" + (i+1)).text(placeName[i]);
+        $("#addressP" + (i+1)).text(address[i]).append(ctry).append(descriptionP);
+        $("#rankP" + (i+1)).text("Our verdict: " + rank[i] + " out of 10 stars!");
         
-        $("#card" + i).show();
+        $("#cardP" + (i+1)).show();
 
     }
 }
@@ -153,9 +153,11 @@ function preference() {
 }
 
 function clearAll() {
-$("#card0").hide();
-$("#card1").hide();
-$("#card2").hide();
-$("#card3").hide();
+
+$("#cardP1").hide();
+$("#cardP2").hide();
+$("#cardP3").hide();
+$("#cardP4").hide();
+$("#cardP5").hide();
 
 }
