@@ -68,7 +68,6 @@ function refineSearch(lat , lon){
         },
         success:
             function(response) {
-                // create variable that stores
                 
                 // BOX 1
 
@@ -94,6 +93,8 @@ function refineSearch(lat , lon){
                 //menu placement
                 var restaurantMenu = response.restaurants[0].restaurant.menu_url
                 $("#menu1").attr("href" , restaurantMenu)
+                //show card
+                $("#cardF1").show();
 
                 // BOX 2
 
@@ -119,7 +120,9 @@ function refineSearch(lat , lon){
                 //menu placement
                 var restaurantMenu2 = response.restaurants[1].restaurant.menu_url
                 $("#menu2").attr("href" , restaurantMenu2)                
-                
+                //show card
+                $("#cardF2").show();
+
                 // BOX 3
 
                 //image placement
@@ -144,6 +147,8 @@ function refineSearch(lat , lon){
                 //menu placement
                 var restaurantMenu3 = response.restaurants[2].restaurant.menu_url
                 $("#menu3").attr("href" , restaurantMenu3)
+                //show card
+                $("#cardF3").show();
 
                 // BOX 4
 
@@ -169,7 +174,8 @@ function refineSearch(lat , lon){
                 //menu placement
                 var restaurantMenu4 = response.restaurants[3].restaurant.menu_url
                 $("#menu4").attr("href" , restaurantMenu4)
-                
+                //show card
+                $("#cardF4").show();                
         },
-        });
+    });
 }

@@ -130,7 +130,7 @@ $(searchPlaceBtn).on('click', function(event){
 
     var city2 = $("#cityInput2").val();
     weatherSearch2(city2);
-    $("#placeResult").show();
+    // $("#placeResult").show();
     }
 });
 
@@ -148,7 +148,7 @@ function preference() {
 }
 
 function clearAll() {
-for (i = 1; i < 6; i++) {
-$("#cardP" + i).hide();
-}
+    for (i = 1; i < 5; i++) {
+    $("#cardP" + i).hide();
+    }
 }
