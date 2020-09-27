@@ -22,6 +22,8 @@ var openAPI = "af6923e95cbb6c53be8ceb07c2b776e5"
 var tomAPI = "OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk"
 
 var touristAtt = "important%20tourist%20attraction"
+var option2place = document.querySelector("#museum");
+var option3place = document.querySelector("#shopping");
 
 function weatherSearch2 (city2) {
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city2 + "&units=imperial&appid=" + openAPI;
@@ -39,7 +41,7 @@ function weatherSearch2 (city2) {
 
 // Show TomTom Tourist Attractions
 function tom1 (lat, lon) {
-    var queryURL = "https://api.tomtom.com/search/2/search/important%20tourist%20attraction.json?key=" + tomAPI + "&lat=" + lat + "&lon=" + lon + "&idxSet=POI&limit=10";
+    var queryURL = "https://api.tomtom.com/search/2/search/" + touristAtt + ".json?key=" + tomAPI + "&lat=" + lat + "&lon=" + lon + "&idxSet=POI&limit=10";
 
     $.ajax({
         url: queryURL,
@@ -110,7 +112,22 @@ function appendAll(imgObj, imgObj2) {
 }
 
 $(searchPlaceBtn).on('click', function(event){
-    
+
+    // touristAtt = ""
+    // if (option1place.checked===true) {
+    //     console.log("museum")
+    //     touristAtt = option1place.value
+    // }
+
+    // else if (option4place.checked===true) {
+    //     console.log("monum")
+    //     touristAtt = option4place.value
+    // }
+    // else {
+    //     touristAtt = "important%20tourist%20attraction"
+    // }
+    preference();
+
     if ($("#cityInput2").val().length == 0) {
         alert("Please enter city name")
     }
@@ -130,3 +147,16 @@ $(searchPlaceBtn).on('click', function(event){
     weatherSearch2(city2);
     }
 });
+
+function preference() {
+    touristAtt = ""
+    if (option2place.checked===true) {
+        touristAtt = option2place.value
+    }
+    else if (option3place.checked===true) {
+        touristAtt = option3place.value
+    }
+    else {
+        touristAtt = "important%20tourist%20attraction"
+    }
+}
