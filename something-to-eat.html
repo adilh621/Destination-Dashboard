@@ -15,283 +15,231 @@
     <!-- montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Aewsome Link -->
+    <!-- Font Awesome Link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 
     <!-- ALL CSS Stylesheets -->
 
     <!-- main CSS stylesheet -->
     <link rel="stylesheet" type="text/css" href="./style.css/master-style.css">
-
-
 </head>
 
 <body>
 
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
-        <a class="navbar-brand hover-effect-dark rounded" style="color: rgb(224, 111, 71);font-weight: bold"
-            href="./dashboard.html">&nbsp;&nbsp;Desination
-            Dashboard&nbsp;&nbsp;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="page-container">
+        <div class="content-wrap">
+            <!-- Nav Bar -->
+            <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+                <a class="navbar-brand hover-effect-dark rounded" style="color: rgb(224, 111, 71);font-weight: bold"
+                    href="./dashboard.html">&nbsp;&nbsp;Desination
+                    Dashboard&nbsp;&nbsp;</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- navigation menu (right)-->
-        <div class="collapse navbar-collapse align-right" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link hover-effect-dark rounded" href="./somewhere-to-go.html">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="./something-to-eat.html">
-                        <i class="fas fa-utensils"></i>
-                        <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- welcome container-->
-    <div class="jumbotron text-center" id="jumbotron">
-
-        <!-- welcome to message -->
-        <div id="welcomeMessage" class="start">
-
-            <form class="form-inline justify-content-center">
-                <label class="jumbo-text">Welcome to</label>
-
-                <!-- adding space before input field -->
-                &nbsp;&nbsp;
-
-                <div class="d-flex">
-                    <!-- city input -->
-                    <input type="text" class="form-control input-box placeholder-city-text" id="cityInput" placeholder="">
-
-                    <!-- adding space before input field -->
-                    &nbsp;
-                    <button type="submit" class="btn btn-default hover-effect-dark" id="searchCityBtn">!</button>
-
+                <!-- navigation menu (right)-->
+                <div class="collapse navbar-collapse align-right" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link hover-effect-dark rounded" href="./somewhere-to-go.html">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./something-to-eat.html">
+                                <i class="fas fa-utensils"></i>
+                                <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
                 </div>
+            </nav>
 
-            </form>
-        </div>
-
-    </div>
-
-
-
-
-    <!-- checkbox filters -->
-    <form class="container">
-
-
-        <div class="form-check">
-
-            <!--food page title -->
-
-            <div id="pageTitle">
-
-                <h3 class="page-title"><u>Something to Eat</u></h3>
-
+            <!-- welcome container-->
+            <div class="jumbotron text-center" id="jumbotron">
+                <!-- welcome to message -->
+                <div id="welcomeMessage" class="start">
+                    <form class="form-inline justify-content-center">
+                        <label class="jumbo-text">Welcome to</label>
+                        <!-- adding space before input field -->
+                        &nbsp;&nbsp;
+                        <div class="d-flex">
+                            <!-- city input -->
+                            <input type="text" class="form-control input-box placeholder-city-text" id="cityInput" placeholder="">
+                            <!-- adding space before input field -->
+                            &nbsp;
+                            <button type="submit" class="btn btn-default hover-effect-dark" id="searchCityBtn">!</button>
+                        </div>
+                    </form>
+                </div>
             </div>
+
+            <!-- checkbox filters -->
+            <form class="container">
+                <div class="form-check">
+                    <!--food page title -->
+                    <div id="pageTitle">
+                        <h3 class="page-title"><u>Something to Eat</u></h3>
+                    </div>
+                    <br>
+                    <div class="checkbox-group">
+                        <p class="checkbox-title">Your Preference</p>
+
+                        <!-- checkbox row 1 -->
+                        <div class="checkbox-row">
+                            <label class="checkbox-label">
+                                <input type="radio" value="bakery" name="options" id="bakery"> bakery
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" value="asian" name="options" id="asian"> asian
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" value="mediterranean" name="options" id="mediterranean"> mediterranean
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" value="seafood" name="options" id="seafood"> seafood
+                            </label>
+                        </div>
+
+                        <!-- checkbox row 2 -->
+                        <div class="checkbox-row">
+                            <label class="checkbox-label">
+                                <input type="radio" value="vegetarian" name="options" id="vegetarian"> vegetarian
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" value="fastfood" name="options" id="fastfood"> fastfood
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" value="deli" name="options" id="deli"> deli
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" value="bar" name="options" id="bar"> bar
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
             <br>
 
-            <div class="checkbox-group">
-
-                <p class="checkbox-title">Your Preference</p>
-
-
-                <!-- checkbox row 1 -->
-                <div class="checkbox-row">
-                    <label class="checkbox-label">
-                        <input type="radio" value="bakery" name="options" id="bakery"> bakery
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" value="asian" name="options" id="asian"> asian
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" value="mediterranean" name="options" id="mediterranean"> mediterranean
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" value="seafood" name="options" id="seafood"> seafood
-                    </label>
-                </div>
-
-                <!-- checkbox row 2 -->
-                <div class="checkbox-row">
-                    <label class="checkbox-label">
-                        <input type="radio" value="vegetarian" name="options" id="vegetarian"> vegetarian
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" value="fastfood" name="options" id="fastfood"> fastfood
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" value="deli" name="options" id="deli"> deli
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="radio" value="bar" name="options" id="bar"> bar
-                    </label>
-                </div>
-            </div>
-
-        </div>
-
-    </form>
-
-    <br>
-
-    <!-- result container -->
-    <div id="foodResult" class="container">
-
-        <!-- beginning of cards -->
-        <!-- <div class="row"> -->
-
-        <div class="col">
-
-            <!-- card 1 -->
-            <div class="card mb-3">
-
-                <!-- row in card -->
-                <div class="row no-gutters">
-
-                    <!-- food 1 img -->
-                    <div class="col-md-3">
-                        <img id="imgOne" src="./assets/placeholder_img.jpg" class="card-img" alt="place1">
-                    </div>
-
-                    <!-- food 1 description -->
-                    <div class="col-md-8">
-                        <div class="card-body food-body">
-                            <h5 class="card-title" id="food-title1"></h5>
-                            <p id=text1 class="card-text food-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Repudiandae doloremque architecto vitae eligendi incidunt voluptatum exercitationem
-                                placeat odit fuga mollitia, eum porro unde. Doloribus quod saepe amet adipisci,
-                                inventore distinctio!</p>
-                                <p id=times1 class='card-text food-text'></p>
-                                <p id=price1 class='card-text food-text'></p>
-                                <a id=menu1 class='card-text food-text'>Click to View menu</a>
-                            <p class="card-text planner-text"><small class="text-muted hover-effect-dark"><i
-                                        class="far fa-calendar"></i> add to planner</small></p>
+            <!-- result container -->
+            <div id="foodResult" class="container">
+                <!-- beginning of cards -->
+                <!-- <div class="row"> -->
+                <div class="col">
+                    <!-- card 1 -->
+                    <div class="card mb-3">
+                        <!-- row in card -->
+                        <div class="row no-gutters">
+                            <!-- food 1 img -->
+                            <div class="col-md-3">
+                                <img id="imgOne" src="./assets/placeholder_img.jpg" class="card-img" alt="place1">
+                            </div>
+                            <!-- food 1 description -->
+                            <div class="col-md-8">
+                                <div class="card-body food-body">
+                                    <h5 class="card-title" id="food-title1"></h5>
+                                    <p id="text1" class="card-text food-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Repudiandae doloremque architecto vitae eligendi incidunt voluptatum exercitationem
+                                        placeat odit fuga mollitia, eum porro unde. Doloribus quod saepe amet adipisci,
+                                        inventore distinctio!</p>
+                                        <p id="times1" class='card-text food-text'></p>
+                                        <p id="price1" class='card-text food-text'></p>
+                                        <a id="menu1" class='card-text food-text'>Click to View menu</a>
+                                    <p class="card-text planner-text"><small class="text-muted hover-effect-dark"><i
+                                                class="far fa-calendar"></i> add to planner</small></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-            </div>
-
-
-            <!-- card 2 -->
-            <div class="card mb-3">
-
-                <!-- row in card -->
-                <div class="row no-gutters">
-
-                    <!-- food 2 img -->
-                    <div class="col-md-3">
-                        <img id="imgTwo" src="./assets/placeholder_img.jpg" class="card-img" alt="place2">
-                    </div>
-
-                    <!-- food 2 description -->
-                    <div class="col-md-8">
-                        <div class="card-body food-body">
-                            <h5 class="card-title" id="food-title2">Food 2</h5>
-                            <p id=text2 class="card-text food-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Repudiandae doloremque architecto vitae eligendi incidunt voluptatum exercitationem
-                                placeat odit fuga mollitia, eum porro unde. Doloribus quod saepe amet adipisci,
-                                inventore distinctio!</p>
-                                <p id=times2 class='card-text food-text'></p>
-                                <p id=price2 class='card-text food-text'></p>
-                                <a id=menu2 class='card-text food-text'>Click to View menu</a>
-                            <p class="card-text planner-text"><small class="text-muted hover-effect-dark"><i
-                                        class="far fa-calendar"></i> add to planner</small></p>
+                    <!-- card 2 -->
+                    <div class="card mb-3">
+                        <!-- row in card -->
+                        <div class="row no-gutters">
+                            <!-- food 2 img -->
+                            <div class="col-md-3">
+                                <img id="imgTwo" src="./assets/placeholder_img.jpg" class="card-img" alt="place2">
+                            </div>
+                            <!-- food 2 description -->
+                            <div class="col-md-8">
+                                <div class="card-body food-body">
+                                    <h5 class="card-title" id="food-title2">Food 2</h5>
+                                    <p id="text2" class="card-text food-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Repudiandae doloremque architecto vitae eligendi incidunt voluptatum exercitationem
+                                        placeat odit fuga mollitia, eum porro unde. Doloribus quod saepe amet adipisci,
+                                        inventore distinctio!</p>
+                                        <p id="times2" class='card-text food-text'></p>
+                                        <p id="price2" class='card-text food-text'></p>
+                                        <a id="menu2" class='card-text food-text'>Click to View menu</a>
+                                    <p class="card-text planner-text"><small class="text-muted hover-effect-dark"><i
+                                                class="far fa-calendar"></i> add to planner</small></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-            </div>
-
-            <!-- card 3 -->
-            <div class="card mb-3">
-
-                <!-- row in card -->
-                <div class="row no-gutters">
-
-                    <!-- food 3 img -->
-                    <div class="col-md-3">
-                        <img id="imgThree" src="./assets/placeholder_img.jpg" class="card-img" alt="place3">
-                    </div>
-
-                    <!-- food 3 description -->
-                    <div class="col-md-8">
-                        <div class="card-body food-body">
-                            <h5 class="card-title" id="food-title3">Food 3</h5>
-                            <p id=text3 class="card-text food-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Repudiandae doloremque architecto vitae eligendi incidunt voluptatum exercitationem
-                                placeat odit fuga mollitia, eum porro unde. Doloribus quod saepe amet adipisci,
-                                inventore distinctio!</p>
-                                <p id=times3 class='card-text food-text'></p>
-                                <p id=price3 class='card-text food-text'></p>
-                                <a id=menu3 class='card-text food-text'>Click to View menu</a>
-                            <p class="card-text planner-text"><small class="text-muted hover-effect-dark"><i
-                                        class="far fa-calendar"></i> add to planner</small></p>
+                    <!-- card 3 -->
+                    <div class="card mb-3">
+                        <!-- row in card -->
+                        <div class="row no-gutters">
+                            <!-- food 3 img -->
+                            <div class="col-md-3">
+                                <img id="imgThree" src="./assets/placeholder_img.jpg" class="card-img" alt="place3">
+                            </div>
+                            <!-- food 3 description -->
+                            <div class="col-md-8">
+                                <div class="card-body food-body">
+                                    <h5 class="card-title" id="food-title3">Food 3</h5>
+                                    <p id="text3" class="card-text food-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Repudiandae doloremque architecto vitae eligendi incidunt voluptatum exercitationem
+                                        placeat odit fuga mollitia, eum porro unde. Doloribus quod saepe amet adipisci,
+                                        inventore distinctio!</p>
+                                        <p id="times3" class='card-text food-text'></p>
+                                        <p id="price3" class='card-text food-text'></p>
+                                        <a id="menu3" class='card-text food-text'>Click to View menu</a>
+                                    <p class="card-text planner-text"><small class="text-muted hover-effect-dark"><i
+                                                class="far fa-calendar"></i> add to planner</small></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-            </div>
-
-            <!-- card 4 -->
-            <div class="card mb-3">
-
-                <!-- row in card -->
-                <div class="row no-gutters">
-
-                    <!-- food 4 img -->
-                    <div class="col-md-3">
-                        <img id="imgFour" src="./assets/placeholder_img.jpg" class="card-img" alt="place4">
-                    </div>
-
-                    <!-- food description -->
-                    <div class="col-md-8">
-                        <div class="card-body food-body">
-                            <h5 class="card-title" id="food-title4">Food 4</h5>
-                            <p id=text4 class="card-text food-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Repudiandae doloremque architecto vitae eligendi incidunt voluptatum exercitationem
-                                placeat odit fuga mollitia, eum porro unde. Doloribus quod saepe amet adipisci,
-                                inventore distinctio!</p>
-                                <p id=times4 class='card-text food-text'></p>
-                                <p id=price4 class='card-text food-text'></p>
-                                <a id=menu4 class='card-text food-text'>Click to View menu</a>
-                            <p class="card-text planner-text"><small class="text-muted hover-effect-dark"><i
-                                        class="far fa-calendar"></i> add to planner</small></p>
+                    <!-- card 4 -->
+                    <div class="card mb-3">
+                        <!-- row in card -->
+                        <div class="row no-gutters">
+                            <!-- food 4 img -->
+                            <div class="col-md-3">
+                                <img id="imgFour" src="./assets/placeholder_img.jpg" class="card-img" alt="place4">
+                            </div>
+                            <!-- food description -->
+                            <div class="col-md-8">
+                                <div class="card-body food-body">
+                                    <h5 class="card-title" id="food-title4">Food 4</h5>
+                                    <p id="text4" class="card-text food-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Repudiandae doloremque architecto vitae eligendi incidunt voluptatum exercitationem
+                                        placeat odit fuga mollitia, eum porro unde. Doloribus quod saepe amet adipisci,
+                                        inventore distinctio!</p>
+                                        <p id="times4" class='card-text food-text'></p>
+                                        <p id="price4" class='card-text food-text'></p>
+                                        <a id="menu4" class='card-text food-text'>Click to View menu</a>
+                                    <p class="card-text planner-text"><small class="text-muted hover-effect-dark"><i
+                                                class="far fa-calendar"></i> add to planner</small></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-            </div>
-
-
-
-
-
             <!-- </div> -->
-
+            </div>
         </div>
-
-
         <!-- footer -->
-        <footer>Copyright - Jetsetters 2020</footer>
-
-
-
+        <footer class="sticky-footer">Copyright - Jetsetters 2020</footer>
+    </div>
         <!-- scripts -->
 
         <!-- jQuery links -->
@@ -309,14 +257,11 @@
         <!-- weather script -->
         <script src="./script.js/weather.js"></script>
 
-
         <!-- something to eat script -->
         <script src="./script.js/food.js"></script>
 
-
         <!-- somewhere to go script -->
         <!-- <script src="./script.js/places.js"></script> -->
-
 </body>
 
 </html>

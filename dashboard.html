@@ -11,161 +11,162 @@
     <!-- Bootstrap Stylesheet-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- google font link -->
-    <!-- montserrat -->
+    <!-- Google Font Link -->
+    <!-- Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome Link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 
-    <!-- ALL CSS Stylesheets -->
+    <!-- All CSS Stylesheets -->
 
-    <!-- main CSS stylesheet -->
+    <!-- Main CSS stylesheet -->
     <link rel="stylesheet" type="text/css" href="./style.css/master-style.css">
 
 </head>
 
 <body>
+    <div class="page-container">
+        <div class="content-wrap">
+            <!-- Nav Bar -->
+            <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top logos">
+                <!-- Destination Dashboard Home (left) -->
+                <a class="navbar-brand hover-effect-dark rounded" style="color: rgb(224, 111, 71);font-weight: bold;" href="./dashboard.html">&nbsp;&nbsp;Desination
+                    Dashboard&nbsp;&nbsp;</a>
+            </nav>
 
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top logos">
-        <!-- destination dashboard home (left) -->
-        <a class="navbar-brand hover-effect-dark rounded" style="color: rgb(224, 111, 71);font-weight: bold;" href="./dashboard.html">&nbsp;&nbsp;Desination
-            Dashboard&nbsp;&nbsp;</a>
-    </nav>
+            <!-- Welcome Container-->
+            <div class="jumbotron text-center" id="jumbotronContainer">
 
-    <!-- welcome container-->
-    <div class="jumbotron text-center" id="jumbotronContainer">
-
-        <!-- where are you going message -->
-        <div id="whereMessage" class="start">
-            <div class="jumbo-text">Where are you ?</div>
-            <!-- city input -->
-            <form class="form-inline justify-content-center">
-                <div class="d-flex">
-                    <input type="text" class="form-control input-box initial-input-city" id="cityInput" placeholder="enter city">
-                    
-                    <!-- adding space before input field -->
-                    &nbsp;
-                    <button type="submit" class="btn btn-default hover-effect-dark" id="departBtn">
-                        <i class="fas fa-plane-departure"></i>
-                    </button>
+                <!-- Where are you going? message -->
+                <div id="whereMessage" class="start">
+                    <div class="jumbo-text">Where are you ?</div>
+                    <!-- City Input -->
+                    <form class="form-inline justify-content-center">
+                        <div class="d-flex">
+                            <input type="text" class="form-control input-box initial-input-city" id="cityInput" placeholder="enter city">
+                            
+                            <!-- Adding space before input field -->
+                            &nbsp;
+                            <button type="submit" class="btn btn-default hover-effect-dark" id="departBtn">
+                                <i class="fas fa-plane-departure"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
 
-        <!-- welcome to city message -->
-        <!-- <div id="welcomeMessage" class="">
-            <form class="form-inline justify-content-center">
-                <label class="jumbo-text">Welcome to</label> -->
-                <!-- adding space before input field -->
-                <!-- &nbsp;&nbsp; -->
-                <!-- <div class="d-flex"> -->
-                    <!-- city input -->
-                    <!-- <input type="text" class="form-control input-box"  id="cityInput" placeholder="enter city"> -->
-                    <!-- adding space before input field -->
-                    <!-- &nbsp; -->
-                    <!-- <button type="submit" class="btn btn-default hover-effect-dark" id="searchCityBtn">!</button> -->
+                <!-- Welcome to city message -->
+                <!-- <div id="welcomeMessage" class="">
+                    <form class="form-inline justify-content-center">
+                        <label class="jumbo-text">Welcome to</label> -->
+                        <!-- adding space before input field -->
+                        <!-- &nbsp;&nbsp; -->
+                        <!-- <div class="d-flex"> -->
+                            <!-- city input -->
+                            <!-- <input type="text" class="form-control input-box"  id="cityInput" placeholder="enter city"> -->
+                            <!-- adding space before input field -->
+                            <!-- &nbsp; -->
+                            <!-- <button type="submit" class="btn btn-default hover-effect-dark" id="searchCityBtn">!</button> -->
+                        <!-- </div> -->
+                    <!-- </form> -->
                 <!-- </div> -->
-            <!-- </form> -->
-        <!-- </div> -->
-        <br>
+                <br>
 
-        <!-- activity message -->
-        <div id="navMessage" class="jumbo-text hide">
-            Do you want
-            <!-- link to place page -->
-            <a href="./somewhere-to-go.html" class="btn btn-default btn-sm active nav-links hover-effect-dark" role="button" aria-pressed="true">somewhere to go</a>
-            or
-            <!-- link to food page -->
-            <a href="./something-to-eat.html" class="btn btn-default btn-sm active nav-links hover-effect-dark" role="button" aria-pressed="true">something to eat</a>
-            ?
+                <!-- Activity message -->
+                <div id="navMessage" class="jumbo-text hide">
+                    Do you want
+                    <!-- link to place page -->
+                    <a href="./somewhere-to-go.html" class="btn btn-default btn-sm active nav-links hover-effect-dark" role="button" aria-pressed="true">somewhere to go</a>
+                    or
+                    <!-- link to food page -->
+                    <a href="./something-to-eat.html" class="btn btn-default btn-sm active nav-links hover-effect-dark" role="button" aria-pressed="true">something to eat</a>
+                    ?
+                </div>
+            </div>
+
+            <!-- Dashboard Container -->
+            <!-- container, bootstrap grid system start -->
+            <div id="dashboard" class="container hide">
+                <!-- row 1 -->
+                <div class="row">
+                    <!-- col left -->
+                    <div class="col-sm-3">
+                        <div class="row">
+                            <!-- Weather -->
+                            <div class="dash-card rounded" style="width:100%;">
+                                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                                <div class="card-body">
+                                    <h4 id="weather-input">75 °F</h4>
+                                </div>
+                                <label class="dash-label">Temperature</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Currency -->
+                            <div class="dash-card rounded" style="width:100%;">
+                                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                                <div class="card-body">
+                                    <img id="currency-input"/>
+                                </div>
+                                <label class="dash-label">Conditions</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- col middle -->
+                    <div class="col-sm-3">
+                        <div class="row">
+                            <!-- Local time -->
+                            <div class="dash-card rounded" style="width:100%;">
+                                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                                <div class="card-body">
+                                    <h4 id="time-input">9/23/2020</h4>
+                                </div>
+                                <label class="dash-label">Date</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Language -->
+                            <div class="dash-card rounded" style="width:100%;">
+                                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                                <div class="card-body">
+                                    <h4 id="language-input">US</h4>
+                                </div>
+                                <label class="dash-label">Country</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- col right (travel tips)-->
+                    <!-- <div class="col-sm-4 " id="toBrindContainer" style="background-color: rgb(243, 243, 243);"> -->
+                        <!-- <img src="" alt=""> -->
+                        <!-- <li class="row test">
+                            <h5>What to wear<h2>
+                        </li>
+                        <li class="row">
+                            tip 2- Lorem ipsum dolor sit amet consect
+                        </li>
+                        <li class="row">
+                            tip 3- Lorem ipsum dolor sit a
+                        </li>
+                        <li class="row">
+                            tip 4- Lorem ipsum dolor sit amet consectetur adipisi
+                        </li>
+                        <li class="row">
+                            tip 5- Lorem ipsum dolor sit amet c
+                        </li> -->
+                    <!-- </div> -->
+                    
+                    <div class="col-sm-5 card dash-card img-container" style ="background-color: rgb(243, 243, 243);">
+                        <img src="./assets/png files/img_dash_group6.png" alt="group1" id="to-bring-container" height="200px" width="200px">
+                    </div>
+                </div>
+            </div>
         </div>
+            <footer class="sticky-footer">Copyright - Jetsetters 2020</footer>
     </div>
-
-    <!-- dashboard container -->
-    <!-- container, bootstrap grid system start -->
-    <div id="dashboard" class="container hide">
-        <!-- row 1 -->
-        <div class="row">
-            <!-- col left -->
-            <div class="col-sm-3">
-                <div class="row">
-                    <!-- Weather -->
-                    <div class="dash-card rounded" style="width:100%;">
-                        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-                        <div class="card-body">
-                            <h4 id="weather-input">75 °F</h4>
-                        </div>
-                        <label class="dash-label">Temperature</label>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <!-- Currency -->
-                    <div class="dash-card rounded" style="width:100%;">
-                        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-                        <div class="card-body">
-                            <img id="currency-input"/>
-                        </div>
-                        <label class="dash-label">Conditions</label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- col middle -->
-            <div class="col-sm-3">
-                <div class="row">
-                    <!-- Local time -->
-                    <div class="dash-card rounded" style="width:100%;">
-                        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-                        <div class="card-body">
-                            <h4 id="time-input">9/23/2020</h4>
-                        </div>
-                        <label class="dash-label">Date</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- Language -->
-                    <div class="dash-card rounded" style="width:100%;">
-                        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-                        <div class="card-body">
-                            <h4 id="language-input">US</h4>
-                        </div>
-                        <label class="dash-label">Country</label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- col right (travel tips)-->
-            <!-- <div class="col-sm-4 " id="toBrindContainer" style="background-color: rgb(243, 243, 243);"> -->
-                <!-- <img src="" alt=""> -->
-                <!-- <li class="row test">
-                    <h5>What to wear<h2>
-                </li>
-                <li class="row">
-                    tip 2- Lorem ipsum dolor sit amet consect
-                </li>
-                <li class="row">
-                    tip 3- Lorem ipsum dolor sit a
-                </li>
-                <li class="row">
-                    tip 4- Lorem ipsum dolor sit amet consectetur adipisi
-                </li>
-                <li class="row">
-                    tip 5- Lorem ipsum dolor sit amet c
-                </li> -->
-            <!-- </div> -->
-            
-            <div class="col-sm-5 card dash-card img-container" style ="background-color: rgb(243, 243, 243);">
-                <img src="./assets/png files/img_dash_group6.png" alt="group1" id="to-bring-container" height="200px" width="200px">
-            </div>
-        </div>
-    </div>
-
-    <footer>Copyright - Jetsetters 2020</footer>
-
-    <!-- scripts -->
+    <!-- Scripts -->
 
     <!-- jQuery links -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
