@@ -67,8 +67,8 @@ function refineSearch(lat , lon ,q){
     
     }
     else{alert('nothing was selected')}
-   
-   
+
+
     console.log("user lat is:",lat);
     console.log("user lon is:",lon);
     console.log("user criteria is:" , q);
