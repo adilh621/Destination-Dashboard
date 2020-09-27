@@ -76,7 +76,7 @@ function refineSearch(lat , lon){
                 var imgContainer = $("#imgOne");
                 if (restaurantImg.charAt(0) === "h") {
                     imgContainer.attr('src', (restaurantImg))}
-                else {imgContainer.attr('src', "./assets/placeholder_img.jpg" )}
+                else {imgContainer.attr('src', "./assets/png_files/img_map2.png" )}
                 //name placement
                 var restaurantName = response.restaurants[0].restaurant.name
                 $("#food-title1").html(restaurantName);
@@ -103,7 +103,7 @@ function refineSearch(lat , lon){
                 var imgContainer2 = $("#imgTwo");
                 if (restaurantImg2.charAt(0) === "h") {
                     imgContainer2.attr('src', (restaurantImg2))}
-                else {imgContainer2.attr('src', "./assets/placeholder_img.jpg" )}
+                else {imgContainer2.attr('src', "./assets/png_files/img_map2.png" )}
                 //name placement
                 var restaurantName2 = response.restaurants[1].restaurant.name
                 $("#food-title2").html(restaurantName2);
@@ -130,7 +130,7 @@ function refineSearch(lat , lon){
                 var imgContainer3 = $("#imgThree");
                 if (restaurantImg3.charAt(0) === "h") {
                     imgContainer3.attr('src', (restaurantImg3))}
-                    else {imgContainer3.attr('src', "./assets/placeholder_img.jpg" )}
+                    else {imgContainer3.attr('src', "./assets/png_files/img_map2.png" )}
                 //name placement
                 var restaurantName3 = response.restaurants[2].restaurant.name
                 $("#food-title3").html(restaurantName3);
@@ -157,7 +157,7 @@ function refineSearch(lat , lon){
                 var imgContainer4 = $("#imgFour");
                 if (restaurantImg4.charAt(0) === "h") {
                     imgContainer4.attr('src', (restaurantImg4))}
-                else {imgContainer4.attr('src', "./assets/placeholder_img.jpg" )}
+                else {imgContainer4.attr('src', "./assets/png_files/img_map2.png" )}
                 //name placement
                 var restaurantName4 = response.restaurants[3].restaurant.name
                 $("#food-title4").html(restaurantName4);
