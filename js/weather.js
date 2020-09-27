@@ -104,22 +104,18 @@ function showImages(response) {
     if (parseInt(ide) < 600) {
         toBringContainer.attr("src", group235);
     }
-    
     // if for ID 600s
     else if (parseInt(ide) > 599 && parseInt(ide) < 624) {
         toBringContainer.attr("src", group6);
     }
-    
     // if for ID 700s
     else if (parseInt(ide) > 700 && parseInt(ide) < 800) {
         toBringContainer.attr("src", group7);
     }
-    
     // if for ID 800s
     else if (parseInt(ide) === 800) {
         toBringContainer.attr("src", group8);
     }
-    
     // if for ID anything else just in case
     else {
         toBringContainer.attr("src", groupElse);
