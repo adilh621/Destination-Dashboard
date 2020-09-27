@@ -54,7 +54,6 @@ function tom1 (lat, lon) {
             if (response.results[i].dataSources !== undefined) {
 
                 poiId.push(response.results[i].dataSources.poiDetails[0].id);
-
                 placeName.push(response.results[i].poi.name);
                 address.push(response.results[i].address.freeformAddress);
                 country.push(response.results[i].address.country);
@@ -92,25 +91,21 @@ function tom2 (poiId) {
         anotherId.push(response.result.description);
 
         appendAll(imgObj, imgObj2);
-
     });
-    } 
-    
+    }     
 }
 
 function appendAll(imgObj, imgObj2) {
 
     for (var i = 0; i < imgId.length; i++) {
-        var descriptionP = $("<p>").text(imgObj2[poiId[i]]);
+        var descriptionP = $("<p>").text(imgObj2[poiId[i]]).css("font-weight","Bold");
         var ctry = $("<p>").text(country[i]);
 
         $("#imageP" + (i+1)).attr("src", "https://api.tomtom.com/search/2/poiPhoto?key=OkYURWQKTdRDcXG4k3GCeRVkW173Dfxk&id=" + imgObj[poiId[i]]);
         $("#titleP" + (i+1)).text(placeName[i]);
         $("#addressP" + (i+1)).text(address[i]).append(ctry).append(descriptionP);
-        $("#rankP" + (i+1)).text("Our verdict: " + rank[i] + " out of 10 stars!");
-        
+        $("#rankP" + (i+1)).text("Our verdict: " + rank[i] + " out of 10 stars!");        
         $("#cardP" + (i+1)).show();
-
     }
 }
 
@@ -153,11 +148,7 @@ function preference() {
 }
 
 function clearAll() {
-
-$("#cardP1").hide();
-$("#cardP2").hide();
-$("#cardP3").hide();
-$("#cardP4").hide();
-$("#cardP5").hide();
-
+for (i = 1; i < 6; i++) {
+$("#cardP" + i).hide();
+}
 }
