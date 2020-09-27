@@ -39,7 +39,7 @@ function weatherSearch2 (city2) {
 
 // Show TomTom Tourist Attractions
 function tom1 (lat, lon) {
-    var queryURL = "https://api.tomtom.com/search/2/search/important%20tourist%20attraction.json?key=" + tomAPI + "&lat=" + lat + "&lon=" + lon + "&idxSet=POI&limit=50";
+    var queryURL = "https://api.tomtom.com/search/2/search/important%20tourist%20attraction.json?key=" + tomAPI + "&lat=" + lat + "&lon=" + lon + "&idxSet=POI&limit=10";
 
     $.ajax({
         url: queryURL,
